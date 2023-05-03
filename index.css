@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 14px;
+  background-color: #f0f8ff;
+  background-image: linear-gradient(160deg, #abddff 0%, #ffffff 100%);
+}
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.5;
+  background: url(./images/clouds-2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.cards {
+  display: flex;
+  width: fit-content;
+  gap: 26px;
+}
+.cards .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 233px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.4s;
+  background-color: #fff;
+  border: 2px solid #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.cards .card:hover,
+.cards .card:hover .image img {
+  transform: scale(1.15) translateZ(0);
+}
+.cards:hover .card:not(:hover) {
+  filter: brightness(0.6) saturate(1) contrast(1.2) blur(10px);
+}
+.cards .card .image {
+  position: relative;
+  background-color: #ffe53b;
+  background-image: linear-gradient(147deg, #fa3f3f 0%, #ffffffd8 74%);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  border-bottom: 1px solid #ffffff;
+  transition: all 0.4s;
+  overflow: hidden;
+}
+.cards .card:nth-child(2) .image {
+  background-color: #85a8cf;
+  background-image: linear-gradient(160deg, #85a8cf 0%, #ffffff 100%);
+}
+.cards .card:nth-child(3) .image {
+  background-color: #ffe5af;
+  background-image: linear-gradient(160deg, #ffeecb 0%, #ffffff 100%);
+}
+.cards .card .image img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s;
+  object-fit: contain;
+}
+.cards .card .text {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  padding: 5px;
+  margin-bottom: 25px;
+}
+.cards .card .text .skills {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  transition: all 0.4s;
+  visibility: hidden;
+  opacity: 0;
+}
+.cards .card:hover .text .skills {
+  visibility: visible;
+  opacity: 1;
+}
+.cards .card .text .skills .box {
+  background: #5e5479;
+  padding: 7px;
+  color: #fff;
+  font-weight: 500;
+  width: 100%;
+}
+.cards .card:nth-child(1) .text .skills .box {
+  background: #be4d4d;
+}
+.cards .card:nth-child(2) .text .skills .box {
+  background: #abddff;
+}
+.cards .card:nth-child(3) .text .skills .box {
+  background: #ffd255;
+}
+.cards .card .text .skills .box:nth-child(1) {
+  border-right: 1px solid #fff;
+}
+.cards .card .text .level {
+  font-size: 12px;
+  letter-spacing: -1px;
+  font-weight: 500;
+  color: #838383;
+}
+.cards .card .text .name {
+  font-family: "Righteous", cursive;
+  color: #1d1e31;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+.cards .card .text p {
+  color: #838383;
+  max-width: 220px;
+  line-height: 1.7;
+  font-size: 10px;
+  margin-top: 5px;
+}
+.cards .card .text button {
+  background: #5e5479;
+  color: #fff;
+  padding: 7px 10px;
+  margin-top: 10px;
+  border-radius: 3px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.cards .card:hover .text button {
+  visibility: visible;
+  opacity: 1;
+}
